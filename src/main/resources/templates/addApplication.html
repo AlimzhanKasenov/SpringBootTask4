@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/mainLayout.html">
+<div layout:fragment="content" >
+  <form class="w-50 mx-auto" th:action="@{/addApplications}" method="post">
+    <div class="form-group">
+      <label class="mt-3" for="formGroupExampleInput">ФИО: </label>
+      <input type="text" name="fullName" class="form-control mt-3" id="formGroupExampleInput" placeholder="ФИО">
+    </div>
+    <div class="form-group">
+      <label class="mt-3">Курс: </label>
+      <select class="form-select mt-3" name="well">
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="Csharp">C#</option>
+        <option value="Front">Front End</option>
+      </select>
+    </div>
+    <div class="row mt-2">
+        <label class="mt-3">Введите номер</label>
+        <input placeholder="+7(7__)________" type="number" name="number" class="form-control mt-3" required>
+    </div>
+    <div>
+        <label class="mt-3">Коментарий:</label>
+        <textarea placeholder="Введите текст" rows="5" type="text" name="comment" class="form-control mt-3"
+                  required></textarea>
+      </div>
+        <button type="submit" class="btn btn-success mt-3">Добавить</button>
+  </form>
+</div>
+</html>
